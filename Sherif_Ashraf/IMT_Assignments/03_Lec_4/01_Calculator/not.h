@@ -1,0 +1,2 @@
+
+void noting(void);
