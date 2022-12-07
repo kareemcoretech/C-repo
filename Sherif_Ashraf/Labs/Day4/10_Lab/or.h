@@ -1,0 +1,2 @@
+
+void oring(void);
