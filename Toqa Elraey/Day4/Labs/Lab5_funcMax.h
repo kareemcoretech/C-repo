@@ -1,0 +1,1 @@
+int GetMax(int x, int y, int z, int k);
