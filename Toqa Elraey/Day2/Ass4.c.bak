@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+	char x;
+	printf("Please Enter a Lower Case Letter: ");
+	scanf("%c", &x);
+	
+	x = x + 32;
+	
+	printf("The Upper Case is: %c", x);
+}
