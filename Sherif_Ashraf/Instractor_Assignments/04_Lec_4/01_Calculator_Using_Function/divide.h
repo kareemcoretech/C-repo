@@ -1,0 +1,2 @@
+
+void divide(void);
