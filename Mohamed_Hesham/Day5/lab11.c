@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "def.h"
 // void Linear_Search(int array[], int size, int x);
+
 int main(){
 	
 	int array[10];
@@ -14,7 +15,7 @@ int main(){
 	
 	int x;
 	
-	printf("Please Enter number you want to search: \n");
+	printf("Please Enter number you want to search: ");
 	scanf("%d", &x);
 	
 	Linear_Search(array, size, x);
@@ -23,6 +24,14 @@ int main(){
 	
 	for(int i = 0; i < size; i++){
 		printf("%d ", array[i]);
+	}
+	
+	
+	
+	printf("\nArray Addresses: \n");
+	
+	for(int i = 0; i < size; i++){
+		printf("%d ", &array[i]);
 	}
 	
 }
