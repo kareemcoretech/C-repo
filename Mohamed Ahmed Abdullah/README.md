@@ -11,7 +11,6 @@
 
 ## Tasks
 
-- Assignment 4
 - Assignment 5
 
 - Lectrue 3 Assignment
