@@ -11,7 +11,6 @@
 
 ## Tasks
 
-- Day 3 labs
 - Day 4 labs
 - Day 5 lab 7
 
@@ -22,3 +21,5 @@
 - Lectrue 3 Assignment
 - Lecture 4 Assignment
 - Lecture 5 Assignment
+
+- Write comments
