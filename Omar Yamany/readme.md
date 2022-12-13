@@ -1,6 +1,6 @@
 # C Repo for IMT
 
-
+#### Contents are uploaded for each day++
 
 ## Contents
 
@@ -9,7 +9,10 @@
 - #### Instructor's Assignments Solutions
 - #### In class labs
 
-> 
-	#### By: Omar Mohamed Yamany
+---
 
-	#### Contributing since: 06/12/2022
+ ##### By: Omar Mohamed Yamany
+ ##### Contributing since: 06/12/2022
+	 
+
+ 
