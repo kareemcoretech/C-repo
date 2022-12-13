@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "def.h"
+
 
 
 void Linear_Search(int array[], int size, int x){
@@ -17,3 +17,5 @@ void Linear_Search(int array[], int size, int x){
 		printf("Value %d is not found in the array\n", x);
 	}
 }
+
+//gcc lab11.c linear_search.c -o lab11.exe
