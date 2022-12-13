@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int getBit(int n, int i){
-	return (n & ( 1 << i )) >> i;
+	return (n >> i) & 1;
 }
 
 void printBinaryNum(int n){

@@ -1,23 +1,29 @@
 #include <math.h>
 
 int roots(float x){
-	float square, cubic, check1, check2;
-	int z;
 	
-	square = sqrt(x);
-	check1 = truncf(square);
+	int flag = 0;
+	float num = x;
+	float i = 1;
 	
-	cubic = cbrt(x);
-	check2 = truncf(cubic);
-	
-	if(square == check1){
-		z = 1;
+	while(num > 0){
+		num = num - i;
+		i = i + 2;
 	}
-	else if(cubic == check2){
-		z = 0;
+	
+	if(num == 0){
+		flag = 1;
 	}
+	
 	else{
-		z = -1;
+		if(cbrt(x) == truncf(cbrt(x))){
+			flag = 0;
+		}
+		else{
+			flag = -1;
+		}
+		
 	}
-	return z;
+	
+	return flag;
 }
