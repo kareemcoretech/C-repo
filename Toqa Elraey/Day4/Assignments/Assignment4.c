@@ -2,9 +2,9 @@
 #include "Assignment4_func.h"
 
 int main(){
-	float num;
+	int num;
 	printf("please enter a number: ");
-	scanf("%f", &num);
+	scanf("%d", &num);
 	
 	int z = countHoles(num);
 	printf("%d", z);
