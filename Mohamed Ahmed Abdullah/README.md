@@ -11,7 +11,6 @@
 
 ## Tasks
 
-- Day 4 labs
 - Day 5 lab 7
 
 - Assignment 3
