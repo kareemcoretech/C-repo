@@ -1,29 +1,30 @@
 #include<stdio.h>
 
-void prime(int a,int b)
+
+int check_num(int num)
 {
-    int isPrime=1;
-    while(a<b)
+    int i;
+
+    for(i=2;i<=num/2;i++)
     {
-        if(a<1)
+        if(num % i == 0)
         {
-            ++a;
-            continue;
-        } 
-        for(int i=2; i<=a/2; i++)
-        {
-            if(a%i==0)
-            {
-                isPrime = 0;
-                break;
-            }
-        } 
-        if (isPrime == 1)
-        {
-            printf("%d",a);   
+            return 0;
         }
-        
-        ++a;
     }
+    return 1;
 }
 
+
+void get_prime(int a, int b)
+{
+    printf("Prime Number Between %d And %d Are \n",a,b);
+    while(a<=b)
+    {
+        if(check_num(a))
+        {
+            printf("%d \t",a);
+        }
+        a++;
+    }
+}
