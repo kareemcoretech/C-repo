@@ -82,7 +82,7 @@ int calculator(int operationID, int num1, int num2){
         break;
     
     case 7:
-        result = !num1;
+        result = ~num1;
         break;
     
     case 8:
@@ -99,6 +99,10 @@ int calculator(int operationID, int num1, int num2){
     
     case 11:
         result = --num1;
+        break;
+
+    default:
+        result = -1;
         break;
     }
 

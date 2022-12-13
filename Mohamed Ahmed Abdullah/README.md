@@ -11,8 +11,6 @@
 
 ## Tasks
 
-- Day 5 lab 7
-
 - Assignment 3
 - Assignment 4
 - Assignment 5
@@ -22,3 +20,4 @@
 - Lecture 5 Assignment
 
 - Write comments
+- Write headers of files
