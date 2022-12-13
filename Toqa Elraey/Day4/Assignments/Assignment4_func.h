@@ -1,1 +1,1 @@
-int countHoles(float x);
+int countHoles(int x);
