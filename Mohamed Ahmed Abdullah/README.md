@@ -1,6 +1,7 @@
 # C Repo for IMT
 
-##### Mohamed Ahmed Abdullah Mahmoud 
+##### Mohamed Ahmed Abdullah Mahmoud
+
 ---
 
 ## Contents
@@ -11,7 +12,6 @@
 
 ## Tasks
 
-- Lectrue 3 Assignment
 - Lecture 4 Assignment
 - Lecture 5 Assignment
 
