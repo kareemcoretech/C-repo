@@ -11,8 +11,6 @@
 
 ## Tasks
 
-- Assignment 5
-
 - Lectrue 3 Assignment
 - Lecture 4 Assignment
 - Lecture 5 Assignment
