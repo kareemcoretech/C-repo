@@ -1,7 +1,7 @@
 #include<stdio.h>
-
 void main()
 {
-	int x = -1;
-	printf("%u", x);
+	char x=257;
+	printf("%d", x);
+	
 }
