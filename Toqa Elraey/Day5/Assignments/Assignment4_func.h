@@ -1,0 +1,1 @@
+void ArithmeticSeries(int Array[], int size);

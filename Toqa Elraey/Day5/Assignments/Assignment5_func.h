@@ -1,0 +1,1 @@
+void GeometricSeries(int Array[], int size);
