@@ -12,18 +12,27 @@ int main()
 		scanf("%d",&Array[i]);
 	}
 	Reverse(Array,Size);
-	printf("Array after reverse is:");
+	
+	int temp;
+	for(int i = 0; i < Size - 1 - i; i++){
+		temp = Array[i];
+		Array[i] = Array[Size - 1 - i];
+		Array[Size - 1 - i] = temp;
+	}
+	
+	printf("Array after reverse is: \n");
 	
 	for(int i=0;i<Size;i++)
 	{
 		printf("%d \n",Array[i]);
 	}
 }
+
 void Reverse(int Array[],int Size)
 {
-	for(int i=0;i<Size;i++)
+	int temp;
+	for(int i=0;i<Size-1-i;i++)
 	{
-		int temp;
 		temp=Array[i];
 		Array[i]=Array[Size-1-i];
 		Array[Size-1-i]=temp;
