@@ -1,0 +1,1 @@
+int Total (int Array[],int Array_size);

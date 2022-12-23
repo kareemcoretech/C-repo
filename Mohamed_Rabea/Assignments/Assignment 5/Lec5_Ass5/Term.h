@@ -1,0 +1,1 @@
+void Term (int Array[], int number);
