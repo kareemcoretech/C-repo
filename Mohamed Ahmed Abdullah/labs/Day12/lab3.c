@@ -35,13 +35,13 @@ void main(void){
 			printf("Please Enter Node Value: ");
 			scanf(" %d",&val);
 			insert_at_last(val);
-			printf("Node Added Thenk You\n");
+			printf("Node Added Thank You\n");
 		}
 		else if(choose == 1){
 			printf("Please Enter Node Value: ");
 			scanf(" %d",&val);
 			insert_at_first(val);
-			printf("Node Added Thenk You\n");
+			printf("Node Added Thank You\n");
 		}
 		else if(choose == 2){
 			printf("Please Enter Node Value: ");
