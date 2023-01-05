@@ -16,24 +16,6 @@ void main(void){
 	printf("%d\n", x);
 	printf("%d\n", y);
 	printf("%f\n", z);
-
-	// 							Building Proccess
-	// file.c -> ( (tool chain):
-	//					-> (Preprocessor) -> intermediate file 
-	// 					-> (Compiler) Compiling process:
-	// 						-> symbol table: object  state (provided,needed)
-	// 						-> Assembly file
-	// 					-> (Assembler) -> object file 
-	// 					-> (linker): See the whole picture:
-	//						object verification:
-	//							1- make suer that every needed object is provided
-	//							otherwise: 
-	//								"linker error": undefined reference to bla bla
-	//							2- make suer that every needed and provided object is provided only once
-	//							otherwise: 
-	//								"linker error": multiple definition of bla bla
-	// 			  ) 
-	// -> file.exe
 	
 	//								Variables
 	//						local				global
