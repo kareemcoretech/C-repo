@@ -9,6 +9,8 @@ u8 *name;
 u8 age;
 u8 *gender;
 
+extern u16 patients_no; // Change this i into number of student in your program
+
 void add_patient(patient human){
     patients[patients_no] = human;
     patients_no++;
@@ -21,7 +23,10 @@ void edit_patient(u16 id, u8 attribute){
             if (attribute == 1){
                 printf("Please enter new name: ");
                 scanf("%s", name);
-                patients[i].name = name;
+                for (int i = 0; i < NAME_MAX_SIZE; i++)
+                {
+                    patients[i].name[i] = name[i];
+                }
             }else if (attribute == 2){
                 printf("Please enter new age: ");
                 scanf("%d", age);
@@ -29,13 +34,16 @@ void edit_patient(u16 id, u8 attribute){
             }else if (attribute == 3){
                 printf("Please enter new gender: ");
                 scanf("%s", gender);
-                patients[i].gender = gender;
+                for (int i = 0; i < GENDER_MAX_SIZE; i++)
+                {
+                    patients[i].gender[i] = gender[i];
+                }
             }            
         }
     }
 }
 
-int is_patient_exist(u16 id){
+u8 is_patient_exist(u16 id){
     for (int i = 0; i < patients_no; i++)
     {
         if(patients[i].id == id){
@@ -43,4 +51,13 @@ int is_patient_exist(u16 id){
         }
     }
     return 0;
+}
+
+patient get_patient_information(u16 id){
+    for (int i = 0; i < patients_no; i++)
+    {
+        if (patients[i].id == id){
+            return patients[i];
+        }
+    }
 }

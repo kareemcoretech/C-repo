@@ -1,9 +1,10 @@
 #ifndef UI_H
 #define UI_H
 
-void start();
+#include "STD_TYPES.h"
+
 void admin_mode();
-int login();
 void user_mode();
+u16 login();
 
 #endif
