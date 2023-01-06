@@ -31,6 +31,7 @@ u8 slot_num;
 
 void admin_mode(){
     u16 is_logged = login();
+    status = 1;
     while(status)
     {
         if(is_logged){
@@ -123,6 +124,7 @@ u16 login(){
 }
 
 void user_mode(){
+    status = 1;
     while(status)
     {
         printf("1- View patient record\n");

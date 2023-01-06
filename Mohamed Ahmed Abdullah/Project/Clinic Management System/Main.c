@@ -1,7 +1,7 @@
 /*
 - Author: Mohamed Ahmed Abdullah
-- Version : 1.0
-- Date: 1 1 2023 
+- Version : 2.0
+- Date: 07 01 2023 
 
 - Project: Clinical Management System
 */
@@ -17,8 +17,8 @@
 
 #define ADMIN 1
 #define USER 2
+
 s8 choice;
-u8 status = 1;
 
 u16 patients_no = 0;
 
@@ -40,7 +40,7 @@ void main(void){
     printf("Clinic Management System\n");
     printf("----------------------------\n\n");
 
-    while(status)
+    while(1)
     {
         printf("1- Admin \n");
         printf("2- User \n");

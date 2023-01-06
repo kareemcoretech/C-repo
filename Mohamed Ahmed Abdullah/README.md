@@ -12,7 +12,7 @@
 
 ## Tasks
 
-- Assignment (6)
+- Assignment (6-(Q7-Etc..))
 - Assignment (8)
 - Assignment (9)
 - Assignment (11)
