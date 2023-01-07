@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Clinc Mangment System</title>
 </head>
 
 <body>
