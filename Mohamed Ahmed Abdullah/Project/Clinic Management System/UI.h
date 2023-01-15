@@ -3,8 +3,13 @@
 
 #include "STD_TYPES.h"
 
+/* Functions of UI */
+
+// Print admin menu
 void admin_mode();
+// Print user menu
 void user_mode();
-u16 login();
+// login
+u8 login();
 
 #endif

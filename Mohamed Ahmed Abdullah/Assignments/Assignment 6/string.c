@@ -72,3 +72,29 @@ void alphabets_only(char* word, int size){
         }
     }
 }
+
+void reverse(char* word){
+    int count = length(word);
+    int center = count / 2;
+
+    for (int i = 0; i < center; i++)
+    {
+        int temp = word[i]; 
+        word[i] = word[count-i-1];
+        word[count-i-1] = temp;
+    }
+}
+
+void concatenate(char *word1, char *word2, char *result_word){
+    int len1 = length(word1);
+    int len2 = length(word2);
+
+    for (int i = 0; i < len1; i++)
+    {
+        result_word[i] = word1[i];
+    }
+    for (int i = 0; i < len2; i++)
+    {
+        result_word[i+len1] = word2[i];
+    }
+}
