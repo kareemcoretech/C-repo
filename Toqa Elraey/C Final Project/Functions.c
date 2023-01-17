@@ -56,21 +56,21 @@ void CreatLast(u8 nameptr[], u8 CopyAge, u8 genderptr[], u16 CopyID, f32 CopySlo
 }
 
 void PatientDataBase(void){
-	u8 namem[] = "Eslam Amir";
+	u8 namem[] = "Eslam";
 	u8 agem = 27;
 	u8 genderm[] = "Male";
 	u16 IDm = 1111;
 	f32 slotm = 12.30;
 	Creatfirst(namem, agem, genderm, IDm, slotm);
 	
-	u8 namem1[] = "Sally Rabie";
-	agem = 50;
+	u8 namem1[] = "Eman";
+	agem = 23;
     u8 genderm1[] = "Female";
 	IDm = 1112;
 	slotm = 1.00;
 	CreatLast(namem1, agem, genderm1, IDm, slotm);
 	
-	u8 namem2[] = "Ahmed Taha";
+	u8 namem2[] = "Ahmed";
 	agem = 42;
 	u8 genderm2[] = "Male";
 	IDm = 1113;
@@ -154,7 +154,11 @@ void TodayReservations(void){
 	Patient *check = Head;
 	while(check != NULL){
 		if(check -> slot != 0){
-			printf("%s   %d    %s    %d    %.2f\n", check->name, check->age, check->gender, check->ID, check->slot);
+			printf("Name: %s\n", check->name);
+			printf("Age: %d\n", check->age);
+			printf("Gender: %s\n", check->gender);
+			printf("ID: %d\n", check->ID);
+			printf("Slot: %.2f\n", check->slot);
 		}
 		check = check -> Next;
 	}

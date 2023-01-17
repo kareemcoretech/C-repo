@@ -35,7 +35,10 @@ int main(){
 			PasswordCheck = checkPassword();
 			if(PasswordCheck == TRUE){
 				printf("Password is right..\n");
-				printf("Please enter 'A' to Add New Patient, 'E' to Edit Patient's Record, 'R' to Reserve an Appointment, or 'C' to Cancel an Appointment: ");
+				printf("Please enter 'A' to Add New Patient,\n");
+				printf("'E' to Edit Patient's Record,\n");
+            	printf("'R' to Reserve an Appointment,\n");
+            	printf("or 'C' to Cancel an Appointment: \n");
 				scanf(" %c", &featureA);
 				
 				switch(featureA){
