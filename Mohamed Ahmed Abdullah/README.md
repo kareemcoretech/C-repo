@@ -13,7 +13,6 @@
 
 ```txt
 - Assignment (6-Q7 ONLY)
-- Assignment (9)
 - Assignment (11)
 - Assignment (12)
 - Assignment (14)
