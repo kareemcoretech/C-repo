@@ -1,7 +1,6 @@
 # C Repo for IMT
 
-##### Mohamed Ahmed Abdullah Mahmoud
-
+###### Mohamed Ahmed Abdullah Mahmoud
 ---
 
 ## Contents
@@ -10,7 +9,18 @@
 - Assignments
 - Labs
 
-## Tasks
+## Tasks (Not Completed)
 
-- Write comments
-- Write headers of files
+```txt
+- Assignment (6-Q7 ONLY)
+- Assignment (11)
+- Assignment (12)
+- Assignment (14)
+- Assignment (15)
+- Assignment (18)
+- Assignment (19)
+
+- Project:
+    - Testing ❌
+    - Operate with wrong entering from user ❌
+```
