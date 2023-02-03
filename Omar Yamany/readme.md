@@ -8,7 +8,8 @@
 - #### IMT Assignments Solutions
 - #### Instructor's Assignments Solutions
 - #### In class labs
-
+- #### Class' board PDFs
+- #### Final Project
 ---
 
  ##### By: Omar Mohamed Yamany
