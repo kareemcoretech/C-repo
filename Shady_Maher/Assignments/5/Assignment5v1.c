@@ -7,20 +7,13 @@ Date: 15/12/2022
 
 #include <stdio.h>
 int Q1 ( int Array [] , int size );		//total sum of array
-
 int Q2 ( int Array [] , int size );		//first occurrence
-
 int Q3 ( int Array [] , int size );		//last occurrence
-
-void Q4 ( void );			//arithmatic series
-
-void Q5 ( void );			//greometric series
-
-int Q6 ( void );			//Fibonacci numbers
-						
+void Q4 ( void );		//arithmatic series
+void Q5 ( void );		//greometric series
+int Q6 ( void );		//Fibonacci numbers					
 void Q7 ( int Array1[] , int Array2[] , int size ); //swap two arrays
-
-void Q8 ( void );			//Reverse
+void Q8 ( void );		//Reverse
 
 
 int main ()
