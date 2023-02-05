@@ -44,4 +44,8 @@
 
 #define COLUMN_SIXTEEN 15
 
+#define LAST_ROW 3
+
+#define LAST_SEEN_COLUMN 16
+
 #endif /* EHAL_LCD_LCD_PRIVATE_H_ */

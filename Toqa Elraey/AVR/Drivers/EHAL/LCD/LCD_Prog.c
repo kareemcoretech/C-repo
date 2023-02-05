@@ -86,16 +86,29 @@ void LCD_vDisplayString(u8 *Copy_u8String){
 }
 
 void LCD_vGoToRowCol(u8 Copy_u8RowNumber, u8 Copy_ColNumber){
-
-	switch(Copy_u8RowNumber)
+	if(Copy_u8RowNumber < LAST_ROW && Copy_ColNumber < LAST_SEEN_COLUMN)
 	{
-	case ROW_ONE:
-		LCD_vSendCMD(SET_CURSOR_LOCATION | (ROW_ONE_ADD | Copy_ColNumber));
-	    break;
+		switch(Copy_u8RowNumber)
+		{
+		case ROW_ONE:
+			LCD_vSendCMD(SET_CURSOR_LOCATION | (ROW_ONE_ADD | Copy_ColNumber));
+		    break;
 
-	case ROW_TWO:
-		LCD_vSendCMD(SET_CURSOR_LOCATION | (ROW_TWO_ADD | Copy_ColNumber));
-		break;
+		case ROW_TWO:
+			LCD_vSendCMD(SET_CURSOR_LOCATION | (ROW_TWO_ADD | Copy_ColNumber));
+			break;
+			}
+	}
+	else
+	{
+		u8 Local_u8ErrorMSG[] = {"ERROR"};
+		LCD_vSendCMD(SET_CURSOR_LOCATION | (ROW_TWO_ADD | COLUMN_ONE));
+		LCD_vDisplayString(Local_u8ErrorMSG);
+		while(1){
+
 		}
+
+	}
+
 
 }
