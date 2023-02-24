@@ -1,0 +1,17 @@
+MCAL/ATMEGA32/EXTI/EXTI_program.o MCAL/ATMEGA32/EXTI/EXTI_program.o:  \
+ ../MCAL/ATMEGA32/EXTI/EXTI_program.c \
+  ../MCAL/ATMEGA32/EXTI/EXTI_interface.h \
+  ../MCAL/ATMEGA32/EXTI/EXTI_config.h \
+  ../MCAL/ATMEGA32/EXTI/EXTI_private.h \
+  ../MCAL/ATMEGA32/EXTI/../../../Services/BIT_MATH/BIT_MATH.h \
+  ../MCAL/ATMEGA32/EXTI/../../../Services/STD_TYPES/STD_TYPES.h
+
+../MCAL/ATMEGA32/EXTI/EXTI_interface.h:
+
+../MCAL/ATMEGA32/EXTI/EXTI_config.h:
+
+../MCAL/ATMEGA32/EXTI/EXTI_private.h:
+
+../MCAL/ATMEGA32/EXTI/../../../Services/BIT_MATH/BIT_MATH.h:
+
+../MCAL/ATMEGA32/EXTI/../../../Services/STD_TYPES/STD_TYPES.h:
