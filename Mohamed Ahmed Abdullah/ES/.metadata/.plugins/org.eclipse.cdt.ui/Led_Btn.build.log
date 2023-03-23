@@ -1,0 +1,33 @@
+17:27:12 **** Incremental Build of configuration Debug for project Led_Btn ****
+make all 
+Building target: Led_Btn.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Led_Btn.map -mmcu=atmega32 -o "Led_Btn.elf"  ./main.o   
+Finished building target: Led_Btn.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Led_Btn.elf  >"Led_Btn.lss"
+Finished building: Led_Btn.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Led_Btn.elf  "Led_Btn.hex"
+Finished building: Led_Btn.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Led_Btn.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     178 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:27:13 Build Finished (took 604ms)
+

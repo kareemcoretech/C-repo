@@ -1,0 +1,58 @@
+/*
+ * EXTI_Prog.c
+ *
+ *  Created on: Feb 18, 2023
+ *      Author: moham
+ */
+
+#include "EXTI_Interface.h"
+#include "../DIO/DIO_Interface.h"
+
+#include "../../Services/BIT_OP.h"
+#include "../../Services/STD_TYPES.h"
+#include "../../Services/MCU_Private.h"
+
+
+
+// Function shall be responsible for initializing external interrupt
+void EXTI_vInit(void){
+	#if EXTI_INTERRUPT == EXTI0_PIN
+		#if EXTI_ACTIVATION_SENSE == EXTI0_LOW_ACTIVATION
+			MCUCR_REG = EXTI0_LOW_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == LOGICAL_CHANGE_ACTIVATION
+			MCUCR_REG = EXTI0_LOGICAL_CHANGE_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == FALLING_ACTIVATION
+			MCUCR_REG = EXTI0_FALLING_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == RISING_ACTIVATION
+			MCUCR_REG = EXTI0_RISING_ACTIVATION;
+		#endif
+
+	#elif EXTI_INTERRUPT == EXTI1_PIN
+
+		#if EXTI_ACTIVATION_SENSE == LOW_ACTIVATION
+			MCUCR_REG = EXTI1_LOW_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == LOGICAL_CHANGE_ACTIVATION
+			MCUCR_REG = EXTI1_LOGICAL_CHANGE_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == FALLING_ACTIVATION
+			MCUCR_REG = EXTI1_FALLING_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == RISING_ACTIVATION
+			MCUCR_REG = EXTI1_RISING_ACTIVATION;
+		#endif
+
+	#elif EXTI_INTERRUPT == EXTI2_PIN
+
+		#if EXTI_ACTIVATION_SENSE == FALLING_ACTIVATION
+			MCUCR_REG = EXTI2_FALLING_ACTIVATION;
+		#elif EXTI_ACTIVATION_SENSE == RISING_ACTIVATION
+			MCUCR_REG = EXTI2_RISING_ACTIVATION;
+		#endif
+
+	#endif
+	SET_BIT(GICR_REG,6);
+}
+
+// Function shall be responsible for disabling external interrupt
+void EXT_vDisableInterrupt(void){
+
+}
+

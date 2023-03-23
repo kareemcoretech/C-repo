@@ -1,0 +1,43 @@
+/*
+ * TIMER_Private.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#ifndef MCAL_TIMER0_TIMER0_PRIVATE_H_
+#define MCAL_TIMER0_TIMER0_PRIVATE_H_
+
+#include "../DIO/DIO_Private.h"
+
+#define TCCR0_REG 	*((volatile u8*) 	0x53)
+#define TCNT0_REG 	*((volatile u8*) 	0x52)
+#define OCR0_REG 	*((volatile u8*)	0x5C)
+#define TIMSK_REG 	*((volatile u8*) 	0x59)
+
+// Modes
+#define NORMAL_MODE 					0b00000000
+#define PWM_PHASE_CORRECT_MODE 			0b01000000
+#define CTC_MODE 						0b10001000
+#define PWM_FAST_MODE		 			0b01001000
+
+// OC0 Modes
+#define OC0_DISCONNECTED 				0b00000000
+#define OC0_TOGGLE						0b00010000
+#define	OC0_CLEAR						0b00100000
+#define OC0_SET							0b00110000
+
+// Prescaler values
+#define STOP							0b00000000
+#define PRESCALER_1						0b00000001
+#define PRESCALER_8						0b00000010
+#define PRESCALER_64					0b00000011
+#define PRESCALER_256					0b00000100
+#define PRESCALER_1024					0b00000101
+#define PRESCALER_EXTERNAL_FALLING		0b00000110
+#define PRESCALER_EXTERNAL_RISING		0b00000111
+
+#define OC0_PORT PORTB
+#define OC0_PIN PIN3
+
+#endif /* MCAL_TIMER0_TIMER0_PRIVATE_H_ */

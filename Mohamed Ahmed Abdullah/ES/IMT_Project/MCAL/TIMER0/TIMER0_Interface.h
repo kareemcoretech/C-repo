@@ -1,0 +1,32 @@
+/*
+ * TIMER_Interface.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#ifndef MCAL_TIMER0_TIMER0_INTERFACE_H_
+#define MCAL_TIMER0_TIMER0_INTERFACE_H_
+
+#include "TIMER0_Config.h"
+#include "TIMER0_Private.h"
+
+// Initilize Timer0
+void TIMER0_vInit(void);
+
+// Reset Counter
+void TIMER0_vResetTCnt(void);
+
+// Set Counter to value
+void TIMER0_vSetTCNT(u8 copy_u8Value);
+
+// Disable TIMER0
+void TIMER0_vDisable(void);
+
+// Set compare value for CTC mode
+void TIMER0_vSetCompareValue(u8 Copy_u8Value);
+
+// Overflow handler
+void TIMER0_InterruptHandler(void (*Copy_vPtrFunction)(void));
+
+#endif /* MCAL_TIMER0_TIMER0_INTERFACE_H_ */

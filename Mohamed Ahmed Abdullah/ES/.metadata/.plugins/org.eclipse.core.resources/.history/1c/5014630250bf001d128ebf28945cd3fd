@@ -1,0 +1,27 @@
+/*
+ * TIMER_Interface.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#ifndef MCAL_TIMER_TIMER_INTERFACE_H_
+#define MCAL_TIMER_TIMER_INTERFACE_H_
+
+#include "./TIMER_Config.h"
+#include "./TIMER_Private.h"
+
+// Initilize Timer 0
+void TIMER0_vInit(void);
+
+// Reset Counter
+void TIMER0_vResetTCnt(void);
+
+// Set Counter from value
+void TIMER0_vSetTCNT(u8 copy_u8Value);
+
+void TIMER0_vDisable(void){
+
+}
+
+#endif /* MCAL_TIMER_TIMER_INTERFACE_H_ */

@@ -1,0 +1,85 @@
+/*
+ * TIMER_Prog.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#include"../../Services/BIT_OP.h"
+#include "../../Services/STD_TYPES.h"
+#include "TIMER0_Interface.h"
+
+// Initilize Timer0
+void TIMER0_vInit(void){
+	#if TIMER_MODE == NORMAL_MODE
+		// Use timer0 with normal mode
+		TCCR0_REG = (TCCR0_REG & 0xB7) | (TIMER_MODE & 0x48);
+	#elif TIMER_MODE == PWM_PHASE_CORRECT_MODE:
+		TCCR0_REG = (TCCR0_REG & 0xB7) | (PWM_PHASE_CORRECT_MODE & 0x48);
+	#elif TIMER_MODE == CTC_MODE:
+		// Use timer0 with CTC Mode
+		TCCR0_REG = (TCCR0_REG & 0xB7) | (CTC_MODE & 0x48);
+	#elif TIMER_MODE == PWM_FAST_MODE:
+		TCCR0_REG = (TCCR0_REG & 0xB7) | (PWM_FAST_MODE & 0x48);
+	#endif
+
+	// Use 1024 Prescaler
+	TCCR0_REG = (TCCR0_REG & 0xF8) | (TIMER_PRESCALER & 0x07);
+
+	// Set initial value of timer register
+	TCNT0_REG = 0x00;
+	// Set initial value
+	OCR0_REG = 0xFF;
+
+	#if TIMER_MODE == NORMAL_MODE
+		// Overflow interrupt
+		#if INTERRUPT_STATUS == INTERRUPT_ENABLED
+			SET_BIT(TIMSK_REG, 0);
+		#elif INTERRUPT_STATUS == INTERRUPT_DISABLED
+			CLR_BIT(TIMSK_REG, 0);
+		#endif
+	#elif TIMER_MODE == PWM_PHASE_CORRECT_MODE
+	#elif TIMER_MODE == CTC_MODE:
+		// Overflow interrupt
+		#if INTERRUPT_STATUS == INTERRUPT_ENABLED
+			SET_BIT(TIMSK_REG, 1);
+		#elif INTERRUPT_STATUS == INTERRUPT_DISABLED
+			CLR_BIT(TIMSK_REG, 1);
+		#endif
+	#elif TIMER_MODE == PWM_FAST_MODE:
+	#endif
+
+}
+
+// Reset Counter
+void TIMER0_vResetTCnt(void){
+	TCNT0_REG = 0x00;
+}
+
+// Set Counter to value
+void TIMER0_vSetTCNT(u8 copy_u8Value){
+	TCNT0_REG = copy_u8Value;
+}
+
+// Disable TIMER0
+void TIMER0_vDisable(void){
+	// Disable timer 0
+	TCCR0_REG = (TCCR0_REG & 0xF8) | (STOP & 0x07);
+}
+
+// Set compare value for ctc mode
+void TIMER0_vSetCompareValue(u8 Copy_u8Value){
+	OCR0_REG = Copy_u8Value;
+}
+
+// Interrupts Handling
+void (*global_vInterruptPtr)();
+
+void TIMER0_InterruptHandler(void (*Copy_vPtrFunction)()){
+	global_vInterruptPtr = Copy_vPtrFunction;
+}
+
+void __vector_11(void) 		__attribute__((signal));
+void __vector_11(void){
+	(*global_vInterruptPtr)();
+}

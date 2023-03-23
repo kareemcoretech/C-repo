@@ -1,0 +1,13 @@
+/*
+ * TIMER_Config.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#ifndef MCAL_TIMER_TIMER_CONFIG_H_
+#define MCAL_TIMER_TIMER_CONFIG_H_
+
+#include "../DIO/DIO_Interface.h"
+
+#endif /* MCAL_TIMER_TIMER_CONFIG_H_ */

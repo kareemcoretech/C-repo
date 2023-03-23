@@ -1,0 +1,61 @@
+/*
+ * TIMER_Prog.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#include "TIMER_Interface.h"
+
+#include"../../Services/BIT_OP.h"
+#include "../../Services/STD_TYPES.h"
+
+// Initilize Timer0
+void TIMER0_vInit(void){
+	// Use timer0 with normal mode
+	CLR_BIT(TCCR0_REG,6); // WGM01
+	CLR_BIT(TCCR0_REG,3); // WGM00
+
+	// Use 1024 Prescaler
+	SET_BIT(TCCR0_REG, 2); // CS02
+	CLR_BIT(TCCR0_REG, 1); // CS01
+	SET_BIT(TCCR0_REG, 0); // CS00
+
+	// Set initial value of timer register
+	TCNT0_REG = 0x00;
+
+	// Enable overflow interrupt
+	SET_BIT(TIMSK_REG,0);
+}
+
+// Reset Counter
+void TIMER0_vResetTCnt(void){
+	TCNT0_REG = 0x00;
+}
+
+// Set Counter to value
+void TIMER0_vSetTCNT(u8 copy_u8Value){
+	TCNT0_REG = copy_u8Value;
+}
+
+// Disable TIMER0
+void TIMER0_vDisable(void){
+	// Disable timer 0
+	CLR_BIT(TCCR0_REG,2); // CS02
+	CLR_BIT(TCCR0_REG,1); // CS01
+	CLR_BIT(TCCR0_REG,0); // CS00
+}
+
+
+// Interrupts
+void (*global_vInterruptPtr)();
+
+void TIMER0_InterruptHandler(void (*Copy_vPtrFunction)()){
+	global_vInterruptPtr = Copy_vPtrFunction;
+}
+
+void __vector_11(void) 		__attribute__((signal));
+void __vector_11(void){
+	(*global_vInterruptPtr)();
+}
+

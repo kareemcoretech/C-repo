@@ -1,0 +1,12 @@
+/*
+ * TIMER_Private.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: moham
+ */
+
+#ifndef MCAL_TIMER_TIMER_PRIVATE_H_
+#define MCAL_TIMER_TIMER_PRIVATE_H_
+
+
+#endif /* MCAL_TIMER_TIMER_PRIVATE_H_ */

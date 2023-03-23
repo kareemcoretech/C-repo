@@ -19,8 +19,4 @@
 - Assignment (15)
 - Assignment (18)
 - Assignment (19)
-
-- Project:
-    - Testing ❌
-    - Operate with wrong entering from user ❌
 ```

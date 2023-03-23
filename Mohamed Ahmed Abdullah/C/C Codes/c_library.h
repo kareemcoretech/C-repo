@@ -1,0 +1,1 @@
+int count_ones(int number);

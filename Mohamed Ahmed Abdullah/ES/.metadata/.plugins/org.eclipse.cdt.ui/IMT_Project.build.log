@@ -1,0 +1,47 @@
+17:06:59 **** Incremental Build of configuration Debug for project IMT_Project ****
+make all 
+Building file: ../Application/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Application/main.d" -MT"Application/main.o" -c -o "Application/main.o" "../Application/main.c"
+In file included from ../Application/main.c:23:
+c:/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Application/main.c:25:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Application/main.c: In function 'main':
+../Application/main.c:47: warning: implicit declaration of function 'TIMER0_vSetCompareValue'
+../Application/main.c:48: warning: implicit declaration of function 'TIMER0_InterruptHandler'
+../Application/main.c: In function 'main_vMcalInit':
+../Application/main.c:68: warning: implicit declaration of function 'TIMER0_vInit'
+Finished building: ../Application/main.c
+ 
+Building target: IMT_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,IMT_Project.map -mmcu=atmega32 -o "IMT_Project.elf"  ./Services/MCU_Prog.o  ./MCAL/TIMER0/TIMER0_Prog.o  ./MCAL/EXTI/EXTI_Prog.o  ./MCAL/DIO/DIO_Prog.o  ./MCAL/ADC/ADC_Prog.o  ./HAL/SEVEN_SEGMENT/SS_Prog.o  ./HAL/LCD/LCD_Prog.o  ./HAL/KPD/KPD_Prog.o  ./Application/main.o   
+Finished building target: IMT_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S IMT_Project.elf  >"IMT_Project.lss"
+Finished building: IMT_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex IMT_Project.elf  "IMT_Project.hex"
+Finished building: IMT_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 IMT_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9888 bytes (30.2% Full)
+(.text + .data + .bootloader)
+
+Data:         47 bytes (2.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:07:00 Build Finished (took 1s.96ms)
+
